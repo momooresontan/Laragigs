@@ -15,10 +15,7 @@ use App\Models\Listing;
 */
 
 Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Latest Listing',
-        'listings' => Listing::all(),
-    ]);
+    
 });
 
 //Single listing
