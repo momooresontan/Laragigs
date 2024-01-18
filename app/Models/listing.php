@@ -1,37 +1,11 @@
-<?php  
-    namespace App\Models;
+<?php
 
-    class Listing{
-        public static function all(){
-            return  [
-                [
-                'id' => 1,
-                'title' => 'Listing One',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Fuga libero consectetur consequuntur ipsa eveniet atque numquam aliquam
-                sed ipsam maiores pariatur cumque laborum nemo tenetur animi,
-                quis veniam odio quae?',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Listing Two',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Fuga libero consectetur consequuntur ipsa eveniet atque numquam aliquam
-                sed ipsam maiores pariatur cumque laborum nemo tenetur animi,
-                quis veniam odio quae?',
-            ],
-        ];
-        }
+namespace App\Models;
 
-        public static function find($id){
-            $listings = self::all();
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-            foreach($listings as $listing){
-                if($listing['id'] == $id){
-                    return $listing;
-                }
-            }
-        }
-    }
-
-?>
+class Listing extends Model
+{
+    use HasFactory;
+}
