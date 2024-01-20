@@ -11,11 +11,11 @@
 <form method="POST" action="/listings">
     @csrf
     <x-form.input name="company" />
-    <x-form.input name="title" />
-    <x-form.input name="location" />
+    <x-form.input name="title" placeholder="Example: Senior Laravel Developer" />
+    <x-form.input name="location" placeholder="Example: Remote, Boston MA, etc" />
     <x-form.input name="email" />
     <x-form.input name="website" />
-    <x-form.input name="tags" />
+    <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" />
     {{-- <x-form.input name="logo" type="file" /> --}}
     <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc" />
 
