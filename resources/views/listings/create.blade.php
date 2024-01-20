@@ -16,6 +16,7 @@
     <x-form.input name="email" />
     <x-form.input name="website" />
     <x-form.input name="tags" />
+    <x-form.input name="logo" type="file" />
     <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc" />
 
     <x-form.button>Create Gig</x-form.button>
