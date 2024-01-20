@@ -4,5 +4,5 @@
     >
         {{ $slot }}
     </button>
-    <btn-back>Back</btn-back>
+    <a href="/" class="text-black ml-4"> Back </a>
 </x-form.field>

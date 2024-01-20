@@ -16,7 +16,7 @@
     <x-form.input name="email" />
     <x-form.input name="website" />
     <x-form.input name="tags" />
-    <x-form.textarea name="description" rows="10" placeholder="Include tasks, requirements, salary, etc" />
+    <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc" />
 
     <x-form.button>Create Gig</x-form.button>
 
@@ -30,6 +30,7 @@
             name="logo"
         />
     </div>
+
 </form>
 </x-card>
 </x-layout>
