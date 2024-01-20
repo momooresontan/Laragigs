@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
 
 class ListingController extends Controller
@@ -40,6 +41,8 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-        return redirect('/');
+        // Session::flash('message', 'Job listing created');
+
+        return redirect('/')->with('success', 'Job lisitng created successfully!');
     }
 }
