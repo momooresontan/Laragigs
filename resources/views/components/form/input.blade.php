@@ -6,4 +6,6 @@
         name="{{ $name }}"
         {{ $attributes(['value' => old($name)]) }}
     >
+
+    <x-form.error name="{{ $name }}" />
 </x-form.field>

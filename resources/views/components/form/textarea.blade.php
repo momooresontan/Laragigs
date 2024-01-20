@@ -9,4 +9,6 @@
     > 
     {{ $slot ?? old($name) }}
     </textarea>
+
+    <x-form.error name="{{ $name }}" />
 </x-form.field>
