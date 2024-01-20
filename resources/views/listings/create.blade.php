@@ -16,6 +16,7 @@
     <x-form.input name="email" />
     <x-form.input name="website" />
     <x-form.input name="tags" />
+    <x-form.textarea name="description" rows="10" placeholder="Include tasks, requirements, salary, etc" />
 
     <div class="mb-6">
         <label for="logo" class="inline-block text-lg mb-2">
@@ -26,21 +27,6 @@
             class="border border-gray-200 rounded p-2 w-full"
             name="logo"
         />
-    </div>
-
-    <div class="mb-6">
-        <label
-            for="description"
-            class="inline-block text-lg mb-2"
-        >
-            Job Description
-        </label>
-        <textarea
-            class="border border-gray-200 rounded p-2 w-full"
-            name="description"
-            rows="10"
-            placeholder="Include tasks, requirements, salary, etc"
-        ></textarea>
     </div>
 
     <div class="mb-6">
