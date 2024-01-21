@@ -11,14 +11,14 @@
     <form method="POST" action="/listings/{{ $listing->id }}/edit" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <x-form.input name="company" />
-        <x-form.input name="title" placeholder="Example: Senior Laravel Developer" />
-        <x-form.input name="location" placeholder="Example: Remote, Boston MA, etc" />
-        <x-form.input name="email" />
-        <x-form.input name="website" />
-        <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" />
-        <x-form.input name="logo" type="file" />
-        <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc" />
+        <x-form.input name="company" :value="old('company', $listing->company)" />
+        <x-form.input name="title" placeholder="Example: Senior Laravel Developer" :value="old('title', $listing->title)" />
+        <x-form.input name="location" placeholder="Example: Remote, Boston MA, etc" :value="old('location', $listing->location)" />
+        <x-form.input name="email" :value="old('email', $listing->email)" />
+        <x-form.input name="website" :value="old('website', $listing->website)" />
+        <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" :value="old('tags', $listing->tags)" />
+        <x-form.input name="logo" type="file" :value="old('logo', $listing->logo)" />
+        <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc">{{  }}</x-form.textarea>
     
         <x-form.button>Edit Gig</x-form.button>
     
