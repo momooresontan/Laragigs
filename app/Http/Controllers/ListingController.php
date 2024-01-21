@@ -74,7 +74,9 @@ class ListingController extends Controller
         return back()->with('success', 'Job listing updated successfully!');
     }
 
-    public function delete (Listing $listing){
-        
+    public function destroy (Listing $listing){
+        $listing->delete();
+
+        return redirect('/')->with('success','Job listing deleted successfully!');
     }
 }
