@@ -8,7 +8,7 @@
     <p class="mb-4">Post a gig to find a developer</p>
 </header>
 
-<form method="POST" action="/listings">
+<form method="POST" action="/listings" enctype="multipart/form-data">
     @csrf
     <x-form.input name="company" />
     <x-form.input name="title" placeholder="Example: Senior Laravel Developer" />
@@ -16,7 +16,7 @@
     <x-form.input name="email" />
     <x-form.input name="website" />
     <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" />
-    {{-- <x-form.input name="logo" type="file" /> --}}
+    <x-form.input name="logo" type="file" />
     <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc" />
 
     <x-form.button>Create Gig</x-form.button>
