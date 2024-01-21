@@ -18,7 +18,10 @@
         <x-form.input name="website" :value="old('website', $listing->website)" />
         <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" :value="old('tags', $listing->tags)" />
         <x-form.input name="logo" type="file" :value="old('logo', $listing->logo)" />
-        <x-form.textarea name="description" rows="5" placeholder="Include tasks, requirements, salary, etc">{{  }}</x-form.textarea>
+        <x-form.textarea 
+        name="description" 
+        rows="5" 
+        placeholder="Include tasks, requirements, salary, etc">{{ old('description', $listing->description) }}</x-form.textarea>
     
         <x-form.button>Edit Gig</x-form.button>
     

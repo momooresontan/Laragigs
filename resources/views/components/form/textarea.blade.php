@@ -6,7 +6,7 @@
         class="border border-gray-200 rounded p-2 w-full"
         name="{{ $name }}"
         {{ $attributes }}>
-        {{ old($name) }}
+        {{ $slot??old($name) }}
     </textarea>
 
     <x-form.error name="{{ $name }}" />
