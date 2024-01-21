@@ -17,7 +17,12 @@
         <x-form.input name="email" :value="old('email', $listing->email)" />
         <x-form.input name="website" :value="old('website', $listing->website)" />
         <x-form.input name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" :value="old('tags', $listing->tags)" />
-        <x-form.input name="logo" type="file" :value="old('logo', $listing->logo)" />
+        <div class="flex mt-6">
+            <div class="flex-1">
+                <x-form.input name="logo" type="file" :value="old('logo', $listing->logo)" />
+            </div>
+            <img src="{{ asset('storage/' . $listing->logo) }}" alt="" class="rounded-xl ml-6" width="100">  
+        </div>
         <x-form.textarea 
         name="description" 
         rows="5" 
