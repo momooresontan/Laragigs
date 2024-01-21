@@ -49,4 +49,9 @@ class ListingController extends Controller
 
         return redirect('/')->with('success', 'Job lisitng created successfully!');
     }
+
+    public function edit(Listing $listing){
+        dd($listing->title);
+        return view('listings.edit', ['listing' => $listing]);
+    }
 }
