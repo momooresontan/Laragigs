@@ -71,8 +71,6 @@ class ListingController extends Controller
 
         $listing->update($formFields);
 
-        // Session::flash('message', 'Job listing created');
-
-        return redirect('/')->with('success', 'Job lisitng created successfully!');
+        return back()->with('success', 'Job listing updated successfully!');
     }
 }

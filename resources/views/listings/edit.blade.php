@@ -8,9 +8,10 @@
         <p class="mb-4">Edit: {{ $listing->title }}</p>
     </header>
     
-    <form method="POST" action="/listings/{{ $listing->id }}/edit" enctype="multipart/form-data">
+    <form method="POST" action="/listings/{{ $listing->id }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
+
         <x-form.input name="company" :value="old('company', $listing->company)" />
         <x-form.input name="title" placeholder="Example: Senior Laravel Developer" :value="old('title', $listing->title)" />
         <x-form.input name="location" placeholder="Example: Remote, Boston MA, etc" :value="old('location', $listing->location)" />
@@ -28,7 +29,7 @@
         rows="5" 
         placeholder="Include tasks, requirements, salary, etc">{{ old('description', $listing->description) }}</x-form.textarea>
     
-        <x-form.button>Edit Gig</x-form.button>
+        <x-form.button>Update Gig</x-form.button>
     
     </form>
     </x-card>
