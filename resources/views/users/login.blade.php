@@ -4,10 +4,10 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Login
             </h2>
-            <p class="mb-4 font-semibold">Create an account to post gigs</p>
+            <p class="mb-4 font-semibold">Log into your account to post gigs</p>
         </header>
 
-        <form method="POST" action="/users">
+        <form method="POST" action="/users/login">
             @csrf
             <x-form.input name="email" />
             <x-form.input name="password" type="password" />
@@ -21,7 +21,7 @@
             <div class="mt-8">
                 <p>
                     Don't have an account?
-                    <a href="/login" class="text-laravel font-semibold">Sign up</a>
+                    <a href="/register" class="text-laravel font-semibold">Register</a>
                 </p>
             </div>
         </form>

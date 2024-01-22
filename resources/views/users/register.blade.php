@@ -26,7 +26,7 @@
 
             <x-form.field>
                 <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black font-semibold">
-                    Sign Up
+                    Register
                 </button>
             </x-form.field>
 
