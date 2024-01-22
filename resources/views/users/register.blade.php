@@ -13,13 +13,22 @@
             <x-form.input name="name" />
             <x-form.input name="email" />
             <x-form.input name="password" type="password" />
-            <x-form.input name="confirm_password" type="password" />
 
-            <div class="mb-6">
+            <x-form.field>
+                <x-form.label name="confirm password" />
+                <input
+                    type="password"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="password_confirmation"
+                />
+                <x-form.error name="password_confirmation" />
+            </x-form.field>
+
+            <x-form.field>
                 <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black font-semibold">
                     Sign Up
                 </button>
-            </div>
+            </x-form.field>
 
             <div class="mt-8">
                 <p>
