@@ -4,32 +4,16 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Register
             </h2>
-            <p class="mb-4">Create an account to post gigs</p>
+            <p class="mb-4 font-semibold">Create an account to post gigs</p>
         </header>
 
-        <form action="">
-            <div class="mb-6">
-                <label for="name" class="inline-block text-lg mb-2">
-                    Name
-                </label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="name" />
-            </div>
+        <form method="POST" action="/users">
+            @csrf
 
-            <div class="mb-6">
-                <label for="email" class="inline-block text-lg mb-2">Email</label>
-                <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" />
-                <!-- Error Example -->
-                <p class="text-red-500 text-xs mt-1">
-                    Please enter a valid email
-                </p>
-            </div>
-
-            <div class="mb-6">
-                <label for="password" class="inline-block text-lg mb-2">
-                    Password
-                </label>
-                <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password" />
-            </div>
+            <x-form.input name="name" />
+            <x-form.input name="email" />
+            <x-form.input name="password" type="password" />
+            <x-form.input name="confirm password" type="password" />
 
             <div class="mb-6">
                 <label for="password2" class="inline-block text-lg mb-2">
