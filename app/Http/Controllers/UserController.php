@@ -10,4 +10,12 @@ class UserController extends Controller
     public function create(){
         return view('users.register');
     }
+
+    //Create new user
+    public function store(Request $request){
+        $formFields = $request->validate([
+            'name' => ['required', 'min:3'],
+            'email'=> ['required','email', Rule::unique('users', 'email')],
+        ]);
+    }
 }
