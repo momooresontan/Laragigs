@@ -7,7 +7,7 @@
             <p class="mb-4 font-semibold">Log into your account to post gigs</p>
         </header>
 
-        <form method="POST" action="/users/login">
+        <form method="POST" action="/users/authenticate">
             @csrf
             <x-form.input name="email" />
             <x-form.input name="password" type="password" />
