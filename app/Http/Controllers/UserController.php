@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -22,5 +23,13 @@ class UserController extends Controller
 
         //Hash password
         $formFields['password'] = bcrypt($formFields['password']);
+
+        //Create user
+        $user = User::create($formFields);
+
+        //Login
+        auth()->login($user);
+
+        return redirect('/')->with('success', 'User created successfully!');
     }
 }
